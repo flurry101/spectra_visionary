@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visionary Spectacles | AR Virtual Try-On</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/virtual-try-on.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Visionary Spectacles</h1>
+        <p>Your vision, our passion.</p>
+        <nav>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="virtual-try-on.html" class="active">Virtual Try-On</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main class="virtual-try-on-container">
+        <section class="ar-experience">
+            <div class="ar-header">
+                <h1>AR Virtual Try-On</h1>
+                <p>Find your perfect frames with our advanced AR technology</p>
+            </div>
+
+            <div class="webcam-container">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas id="output-canvas"></canvas>
+                <div class="camera-permissions">
+                    <button id="start-camera" aria-label="Start Camera">
+                        <i class="fas fa-camera"></i> Start Camera
+                    </button>
+                </div>
+            </div>
+
+            <section class="selection-panels">
+                <div class="selection-panel gender-selection">
+                    <h3>Select Gender</h3>
+                    <div class="options-grid">
+                        <button class="option gender-option" data-gender="male">
+                            <i class="fas fa-male"></i>
+                            <span>Male</span>
+                        </button>
+                        <button class="option gender-option" data-gender="female">
+                            <i class="fas fa-female"></i>
+                            <span>Female</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="selection-panel face-shape-selection">
+                    <h3>Select Face Shape</h3>
+                    <div class="options-grid">
+                        <button class="option face-shape-option" data-shape="oval">
+                            <img src="images/face-shapes/oval.png" alt="Oval Face Shape">
+                            <span>Oval</span>
+                        </button>
+                        <button class="option face-shape-option" data-shape="round">
+                            <img src="images/face-shapes/round.png" alt="Round Face Shape">
+                            <span>Round</span>
+                        </button>
+                        <button class="option face-shape-option" data-shape="square">
+                            <img src="images/face-shapes/square.png" alt="Square Face Shape">
+                            <span>Square</span>
+                        </button>
+                        <button class="option face-shape-option" data-shape="heart">
+                            <img src="images/face-shapes/heart.png" alt="Heart Face Shape">
+                            <span>Heart</span>
+                        </button>
+                        <button class="option face-shape-option" data-shape="heart">
+                            <img src="images/face-shapes/triangle.png" alt="Triangle Face Shape">
+                            <span>Heart</span>
+                        </button>
+                        <button class="option face-shape-option" data-shape="heart">
+                            <img src="images/face-shapes/diamond.png" alt="Diamond Face Shape">
+                            <span>Heart</span>
+                        </button>
+                    </div>
+                </div>
+
+                <section class="selection-panels">
+                    <div class="frame-layout-container">
+                        <div class="side-image left-image">
+                        </div>                
+                <div class="selection-panel frame-selection">
+                    <h3>Choose Frame Style</h3>
+                    <div class="options-grid">
+                        <button class="option frame-option" data-frame="aviator">
+                            <div class="option-content">
+                                <img src="images/aviator.jpg" alt="Aviator Frame">
+                                <div class="frame-details">
+                                    <span>Aviator</span>
+                                    <div class="frame-tag">Classic</div>
+                                    <div class="frame-compatibility">
+                                        <span class="compatibility-icon">✓</span>
+                                        Highly Compatible
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+
+                        <button class="option frame-option" data-frame="wayfarer">
+                            <div class="option-content">
+                                <img src="images/wayfarer.jpg" alt="Wayfarer Frame">
+                                <div class="frame-details">
+                                    <span>Wayfarer</span>
+                                    <div class="frame-tag">Trendy</div>
+                                    <div class="frame-compatibility">
+                                        <span class="compatibility-icon">✓</span>
+                                        Most Popular
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+
+                        <button class="option frame-option" data-frame="cat-eye">
+                            <div class="option-content">
+                                <img src="images/cateye.jpg" alt="Cat Eye Frame">
+                                <div class="frame-details">
+                                    <span>Cat Eye</span>
+                                    <div class="frame-tag">Elegant</div>
+                                    <div class="frame-compatibility">
+                                        <span class="compatibility-icon">✓</span>
+                                        Great Fit
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+
+                        <button class="option frame-option" data-frame="round">
+                            <div class="option-content">
+                                <img src="images/round.jpg" alt="Round Frame">
+                                <div class="frame-details">
+                                    <span>Round</span>
+                                    <div class="frame-tag">Vintage</div>
+                                    <div class="frame-compatibility">
+                                        <span class="compatibility-icon">✓</span>
+                                        Classic Style
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+
+                </div>
+            </section>
+            </section>
+            <script>
+                document.querySelectorAll('.selection-panel').forEach(panel => {
+                    panel.addEventListener('click', (e) => {
+                        const option = e.target.closest('.option');
+                        if (option) {
+                            // Remove selected class from siblings in the same panel
+                            panel.querySelectorAll('.option').forEach(opt => {
+                                opt.classList.remove('selected');
+                            });
+
+                            // Add selected class to clicked option
+                            option.classList.add('selected');
+
+                            // Additional logic based on selection type
+                            if (option.dataset.gender) {
+                                // Handle gender selection
+                            } else if (option.dataset.shape) {
+                                // Handle face shape selection
+                            } else if (option.dataset.frame) {
+                                // Handle frame style selection
+                            }
+                        }
+                    });
+                });                
+            </script>
+        </section>
+
+        <div class="ar-actions">
+            <button id="capture-frame" class="btn btn-primary">
+                <i class="fas fa-camera"></i> Capture Frame
+            </button>
+            <button id="save-frame" class="btn btn-secondary">
+                <i class="fas fa-save"></i> Save Frame
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" class="github"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="subscribe-btn">
+                        Subscribe <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                <div class="toast"></div>
+                <script src="src/scripts/subscription.js"></script>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Visionary Spectacles. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <h2>Camera Access Permission</h2>
+            <p>We need camera access to provide the virtual try-on experience. Your privacy is our priority.</p>
+            <div class="privacy-controls">
+                <label>
+                    <input type="checkbox" id="privacy-consent">
+                    I understand and consent to camera access
+                </label>
+                <div class="modal-actions">
+                    <button id="deny-camera">Deny</button>
+                    <button id="allow-camera">Allow</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="module" src="src/scripts/script.js"></script>
+
+</body>
+
+</html>

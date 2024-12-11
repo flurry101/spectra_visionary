@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visionary Spectacles - Blog</title>
+    <link rel="icon" type="image/x-icon" href="images\icons\favicon.ico">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Visionary Spectacles Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="loader">
+            <div class="loader-content">
+                <div class="loader-glasses">👓</div>
+                <p>Loading your perfect vision...</p>
+            </div>
+        </div>
+    </main>
+
+    <div class="blog-container">
+        <div class="blog-search-container">
+            <input type="text" id="blog-search" placeholder="Search blog posts...">
+            <div class="blog-filters">
+                <button class="filter-btn" data-category="all">All</button>
+                <button class="filter-btn" data-category="eye-health">Eye Health</button>
+                <button class="filter-btn" data-category="style-guides">Style Guides</button>
+                <button class="filter-btn" data-category="lens-technology">Lens Technology</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="blog">
+
+        <div class="blog-grid">
+
+    </section>
+
+    <div id="blog-post-modal" class="modal-container">
+        <div class="modal-content">
+            <div id="full-blog-content"></div>
+            <button class="close-modal">&times;</button>
+        </div>
+    </div>
+
+    <script src="src/scripts/blog.js"></script>
+    <script src="src/scripts/script.js"></script>
+
+</body>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Connect With Us</h4>
+            <div class="social-icons">
+                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Newsletter</h4>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="subscribe-btn">
+                    Subscribe <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            <div class="toast"></div>
+            <script src="src/scripts/subscription.js"></script>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

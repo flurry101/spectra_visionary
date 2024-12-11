@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name=" View on Lenskart port" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Visionary Spectacles</title>
+    <link rel="icon" type="image/x-icon" href="images\icons\favicon.ico">
+    <link rel="stylesheet" href="src\styles\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Visionary Spectacles</h1>
+        <p>Your vision, our passion.</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#frames">Frames</a></li>
+                <li><a href="#add-ons">Add-Ons</a></li>
+                <li><a href="virtual-try-on.html">Virtual Try-On</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="loader">
+            <div class="loader-content">
+                <div class="loader-glasses">👓</div>
+                <p>Loading your perfect vision...</p>
+            </div>
+        </div>
+
+        <div class="cart-icon">
+            🛒
+            <span class="cart-count">0</span>
+        </div>
+
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount">₹0</span>
+                </div>
+                <a href="checkout.html"><button class="checkout-btn">Proceed to Checkout <i class="fas fa-shopping-cart"></i></button></a>
+            </div>
+        </div>
+
+    
+
+        <section id="home" class="hero" style="background-image: url('\\images\\hero-img.jpg');">
+            <div class="hero-content">
+                <h2>Find Your Perfect Pair</h2>
+                <p>Explore our wide range of stylish frames.</p>
+            </div>
+        </section>
+
+        <section id="frames">
+            <div class="filter-section">
+                <div class="price-range">
+                    <label>Price Range: ₹1000 - ₹10000</label>
+                    <input type="range" min="1000" max="10000" step="100" value="5000">
+                </div>
+            </div>
+            <div class="frame-selection">
+                <h2>Choose Your Frames</h2>
+                <!--               <form id="eye-condition-form">
+                    <label for="eye-power">Enter your eye power:</label>
+                    <input type="text" id="eye-power" name="eye-power" required>
+                    <label for="condition">Condition:</label>
+                    <select id="condition" name="condition">
+                        <option value="myopia">Myopia</option>
+                        <option value="hypermetropia">Hypermetropia</option>
+                        <option value="presbyopia">Presbyopia</option>
+                    </select>
+                    <button type="submit">Find Frames</button>
+                </form>-->
+                <div class="frames-list">
+                    <div class="frame-item">
+                        <img src="\images\aviator.jpg" alt="Aviator Frame">
+                        <h3>Aviator</h3>
+                        <p>Classic style with modern comfort</p>
+                        <p class="price">₹6,999</p>
+                        <button onclick="addToCart(this)" data-price="6999">Add to Cart</button>
+                        <button onclick="redirectToShop('frame1')"> View on Lenskart </button>
+
+                    </div>
+                    <div class="frame-item">
+                        <img src="\images\cateye.jpg" alt="Cateye Frame">
+                        <h3>Cateye</h3>
+                        <p>Elegant and sophisticated</p>
+                        <p class="price">₹2,999</p>
+                        <button onclick="addToCart(this)" data-price="2999">Add to Cart</button>
+                        <button onclick="redirectToShop('frame2')"> View on Lenskart </button>
+                    </div>
+                    <div class="frame-item">
+                        <img src="\images\oval.png" alt="Oval Frame">
+                        <h3>Oval</h3>
+                        <p>Timeless and versatile</p>
+                        <p class="price">₹1,999</p>
+                        <button onclick="addToCart(this)" data-price="1999">Add to Cart</button>
+                        <button onclick="redirectToShop('frame3')"> View on Lenskart </button>
+                    </div>
+                    <div class="frame-item">
+                        <img src="\images\rect.jpg" alt="Square Frame">
+                        <h3>Square</h3>
+                        <p>Bold and professional</p>
+                        <p class="price">₹2,999</p>
+                        <button onclick="addToCart(this)" data-price="2999">Add to Cart</button>
+                        <button onclick="redirectToShop('frame4')"> View on Lenskart </button>
+                    </div>
+                    <div class="frame-item">
+                        <img src="\images\butter.jpg" alt="Butterfly Frame">
+                        <h3>Butterfly </h3>
+                        <p>Catch the breeze, see with Ease</p>
+                        <p class="price">₹3,999</p>
+                        <button onclick="addToCart(this)" data-price="3999">Add to Cart</button>
+                        <button onclick="redirectToShop('frame5')"> View on Lenskart </button>
+                    </div>
+                    <div class="frame-item">
+                        <img src="\images\round.jpg" alt="Round Frame">
+                        <h3>Round</h3>
+                        <p>Where vintage meets vision</p>
+                        <p class="price">₹4,999</p>
+                        <button onclick="addToCart(this)" data-price="4999">Add to Cart</button>
+                        <button onclick="redirectToShop('frame6')"> View on Lenskart </button>
+                    </div>
+                    <div class="frame-item">
+                        <img src="\images\browline.jpeg" alt="Browline Frame">
+                        <h3>Browline</h3>
+                        <p>Where Elegance and Edge collide</p>
+                        <p class="price">₹3,999</p>
+                        <button onclick="addToCart(this)" data-price="3999">Add to Cart</button>
+                        <button onclick="redirectToShop('frame7')"> View on Lenskart </button>
+                    </div>
+                    <div class="frame-item">
+                        <img src="\images\over.jpg" alt="Oversized Frame">
+                        <h3>Oversized</h3>
+                        <p>Where fashion Meets Bold Vision</p>
+                        <p class="price">₹4,599</p>
+                        <button onclick="addToCart(this)" data-price="4599">Add to Cart</button>
+                        <button onclick="redirectToShop('frame8')"> View on Lenskart </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="add-ons">
+            <h2>Enhance Your Vision</h2>
+            <form id="add-ons-form">
+                <div class="addon-card">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" name="blue-light" value="1229">
+                        <div class="addon-content">
+                            <div class="addon-title">
+                                <span class="addon-icon">🌟</span>
+                                Blue Light Filter
+                            </div>
+                            <div class="addon-price">₹1,229</div>
+                            <div class="addon-description">Protect your eyes from harmful blue light emitted by digital screens</div>
+                        </div>
+                    </label>
+                </div>
+    
+                <div class="addon-card">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" name="uv-ray" value="2339">
+                        <div class="addon-content">
+                            <span class="addon-icon">☀️</span>
+                            <div class="addon-title">UV Ray Protection</div>
+                            <div class="addon-price">₹2,339</div>
+                            <div class="addon-description">Shield your eyes from harmful UV rays with advanced protection</div>
+                        </div>
+                    </label>
+                </div>
+    
+                <div class="addon-card">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" name="dust" value="1779">
+                        <div class="addon-content">
+                            <span class="addon-icon">🌪️</span>
+                            <div class="addon-title">Dust Resistant</div>
+                            <div class="addon-price">₹1,779</div>
+                            <div class="addon-description">Keep your lenses clean with our dust-resistant coating</div>
+                        </div>
+                    </label>
+                </div>
+    
+                <div class="addon-card">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" name="water" value="999">
+                        <div class="addon-content">
+                            <span class="addon-icon">💧</span>
+                            <div class="addon-title">Water Resistant</div>
+                            <div class="addon-price">₹999</div>
+                            <div class="addon-description">Protect your lenses from water damage and splashes</div>
+                        </div>
+                    </label>
+                </div>
+    
+                <button type="submit">Calculate Total</button>
+            </form>
+    
+            <div class="selected-addons">
+                <h3>Selected Add-ons</h3>
+                <div class="selected-items"></div>
+                <div class="total-price"></div>
+            </div>
+        </section>
+        
+    </main>
+
+
+   <!-- <section id="blog">
+        <a href="blog.html"><h2>Eye Health & Style Blog</h2></a>
+        
+        <div class="blog-filter">
+            <button class="filter-btn active" data-category="all">All Posts</button>
+            <button class="filter-btn" data-category="eye-health">Eye Health</button>
+            <button class="filter-btn" data-category="style-tips">Style Tips</button>
+            <button class="filter-btn" data-category="technology">Lens Technology</button>
+        </div>
+    
+        <div class="blog-grid">
+            <article class="blog-post" data-category="eye-health">
+                <img src="public/images/blog/eye-health-1.jpg" alt="Understanding Eye Health">
+                <div class="blog-content">
+                    <h3>10 Tips for Maintaining Healthy Eyes</h3>
+                    <p>Discover expert strategies to protect and improve your vision...</p>
+                    <div class="blog-meta">
+                        <span>Dr. Vision Expert</span>
+                        <span>January 15, 2024</span>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </article>
+    
+            <article class="blog-post" data-category="style-tips">
+                <img src="public/images/blog/style-1.jpg" alt="Choosing Right Frames">
+                <div class="blog-content">
+                    <h3>Frames that Complement Your Face Shape</h3>
+                    <p>Learn how to select frames that enhance your unique facial features...</p>
+                    <div class="blog-meta">
+                        <span>Style Guru</span>
+                        <span>February 2, 2024</span>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </article>
+    
+            <article class="blog-post" data-category="technology">
+                <img src="public/images/blog/tech-1.jpg" alt="Lens Technology">
+                
+                <div class="blog-content">
+                    <h3>Latest Advances in Lens Technology</h3>
+                    <p>Explore cutting-edge innovations in eyewear technology...</p>
+                    <div class="blog-meta">
+                        <span>Tech Innovator</span>
+                        <span>March 10, 2024</span>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    
+        <div class="blog-pagination">
+            <button class="prev-page">Previous</button>
+            <span class="page-number">Page 1 of 3</span>
+            <button class="next-page">Next</button>
+        </div>
+    </section> -->
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com" class="github"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="subscribe-btn">
+                            Subscribe <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="toast"></div>
+                    <script src="src/scripts/subscription.js"></script>
+                </div>
+                
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Visionary Spectacles. All Rights Reserved.</p>
+            </div>
+        </footer>
+    <script src="src/scripts/script.js"></script>
+</body>
+
+</html>

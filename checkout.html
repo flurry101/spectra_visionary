@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visionary Spectacles</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/checkout.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout: Visionary Spectacles</h1>
+        <p>Your vision, our passion.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="frames.html">Frames</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <main class="checkout-container">
+
+        <div class="checkout-wrapper">
+            <section class="checkout-order-summary">
+                <h2>Order Summary</h2>
+                <div class="checkout-items-list" id="checkout-items">
+                    <!-- Items will be dynamically added here -->
+                </div>
+                
+                <div class="checkout-add-ons-section" id="checkout-add-ons">
+                    <h3>Selected Add-ons</h3>
+                    <!-- Add-ons will be dynamically added here -->
+                </div>
+
+                <div class="checkout-pricing">
+                    <div class="pricing-row">
+                        <span>Subtotal</span>
+                        <span id="checkout-subtotal">₹0</span>
+                    </div>
+                    <div class="pricing-row">
+                        <span>Add-ons</span>
+                        <span id="checkout-addons-total">₹0</span>
+                    </div>
+                    <div class="pricing-row total">
+                        <span>Total</span>
+                        <span id="checkout-total">₹0</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="checkout-form">
+                <h2>Shipping Information</h2>
+                <form id="checkout-shipping-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Street Address</label>
+                        <input type="text" id="address" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postal-code">Postal Code</label>
+                            <input type="text" id="postal-code" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" required>
+                            <option value="">Select Country</option>
+                            <option value="india">India</option>
+                            <option value="usa">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <!-- Add more countries -->
+                        </select>
+                    </div>
+
+                    <div class="payment-methods">
+                        <h3>Payment Method</h3>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="credit-card" required>
+                                <span><i class="fab fa-cc-visa"></i> Credit Card</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="paypal">
+                                <span><i class="fab fa-paypal"></i> PayPal</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="gpay">
+                                <span><i class="fab fa-google"></i> Google Pay</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-place-order">
+                        Place Order <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="#">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" class="github"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="subscribe-btn">
+                        Subscribe <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Visionary Spectacles. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="src/scripts/checkout.js"></script>
+
+</body>
+</html>
