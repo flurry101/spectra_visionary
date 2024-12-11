@@ -1,0 +1,23 @@
+blog:
+  title: Visionary Spectacles Blog
+  description: Your comprehensive guide to vision, style, and wellness
+  pagination:
+    posts_per_page: 9
+  search:
+    enabled: true
+    min_chars: 2
+  categories:
+    - eye-health
+    - style-guides
+    - lens-technology
+  features:
+    modal_view: true
+    search_fields:
+      - title
+      - tags
+      - content
+      - category
+
+seo:
+  default_image: /images/blog/default-seo.jpg
+  meta_description: Explore eye health, style tips, and lens technology

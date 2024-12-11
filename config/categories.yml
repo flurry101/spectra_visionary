@@ -1,0 +1,27 @@
+categories:
+  eye-health:
+    name: Eye Health
+    description: Expert insights into maintaining optimal eye health
+    color: "#2ecc71"
+    icon: 👁️
+    featured_posts:
+      - 10-tips-for-eye-health
+      - digital-eye-strain
+
+  style-guides:
+    name: Style Guides
+    description: Fashion and frame selection tips
+    color: "#3498db"
+    icon: 🕶️
+    featured_posts:
+      - face-shape-frames
+      - choosing-right-glasses
+
+  lens-technology:
+    name: Lens Technology
+    description: Latest innovations in lens design
+    color: "#e74c3c"
+    icon: 🔬
+    featured_posts:
+      - blue-light-protection
+      - lens-coatings
