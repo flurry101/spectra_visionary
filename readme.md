@@ -215,7 +215,7 @@ npm run dev
 
 - Project Maintainer: [Melody]((https://github.com/flurry101))
 - Email: [GMail](mailto:m3l0dy.144@gmail.com)
-- Project Link: [Live Demo](https://github.com/flurry101/visionary-spectacles)
+- Project Link: [Live Demo](https://flurry101.github.io/spectra_visionary)
 
 ### 🙏 Acknowledgements
 
