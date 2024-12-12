@@ -15,12 +15,6 @@ Visionary Spectacles is a modern, responsive e-commerce platform specializing in
 - Responsive Product Filtering
 - Real-time Price Calculations
 
-### 👓 Unique Eyewear Experience
-- AR Virtual Try-On Technology
-- Comprehensive Frame Compatibility Matching
-- Face Shape Analysis for Frame Selection
-- Detailed Frame Style Recommendations
-
 ### 💻 Frontend Innovation
 - Responsive and Adaptive Design
 - Smooth GSAP Animations
@@ -46,11 +40,10 @@ Visionary Spectacles is a modern, responsive e-commerce platform specializing in
 - Performance-optimized Interactions
 - Modern, Clean Aesthetic
 
-### 🔒 Privacy and Consent
-- Camera Access Permissions
-- Transparent User Consent Mechanisms
-- Local Storage Management
-
+  ### 👓 Unique Eyewear Experience
+- AR Virtual Try-On Technology (Not yet implemented)
+- Face Shape Analysis for Frame Selection
+- Detailed Frame Style Recommendations
 
 ## 📦 Prerequisites
 
