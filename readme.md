@@ -40,7 +40,7 @@ Visionary Spectacles is a modern, responsive e-commerce platform specializing in
 - Performance-optimized Interactions
 - Modern, Clean Aesthetic
 
-  ### 👓 Unique Eyewear Experience
+### 👓 Unique Eyewear Experience
 - AR Virtual Try-On Technology (Not yet implemented)
 - Face Shape Analysis for Frame Selection
 - Detailed Frame Style Recommendations
