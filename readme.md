@@ -1,7 +1,7 @@
 # 👓 Visionary Spectacles E-commerce Website
 
 ## 🌟 Project Overview
-A modern, responsive eyewear e-commerce platform developed during HackOasis v2 hackathon in 6 hours.
+A modern, responsive eyewear e-commerce platform developed during HackOasis v2 hackathon under a 6 hour time-constraint.
 
 ---
 
