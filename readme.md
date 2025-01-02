@@ -76,15 +76,6 @@ A modern, responsive eyewear e-commerce platform developed during HackOasis v2 h
 
 ---
 
-## 📞 Contact
-
-| **Project Maintainer**      | [Melody](https://github.com/flurry101) |
-|-----------------------------|---------------------------------------|
-| **Email**                   | [m3l0dy.144@gmail.com](mailto:m3l0dy.144@gmail.com) |
-| **Project Link**            | [Live Demo](https://flurry101.github.io/spectra_visionary) |
-
----
-
 ## 🙏 Acknowledgements
 
 - GSAP Animation & Vue.js Library
